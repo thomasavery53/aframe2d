@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>practice</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script>
+</head>
+<body>
+	<!-- HTML goes here -->-
+    <a-scene device-orientation-permission-ui="enabled: false" renderer="precision: medium">
+        <a-sky color="lightblue"> </a-sky>
+        <a-plane id="dirt" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/minecraft/grass.png" position="0 0 -4" rotation="-90 0 0" width="100" height="100" ></a-plane>
+        <a-cylinder position="-1 1 -3" rotation="0 0 0" radius="0.1" height="3" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-cylinder>
+        <a-cylinder position="2 1 -3" rotation="0 0 0" radius="0.1" height="3" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-cylinder>
+        <--legs ---->
+        <a-box position="-1 .15 -3.6" rotation="45 0 0" width=".5" height=".4" scale=".17 4 .17" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <a-box position="2 .15 -3.6" rotation="45 0 0" width=".5" height=".4" scale=".17 4 .17" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <a-box position="2 .15 -2.4" rotation="135 0 0" width=".5" height=".4" scale=".17 4 .17" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <a-box position="-1 .15 -2.4" rotation="135 0 0" width=".5" height=".4" scale=".17 4 .17" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <--bottom flat leg planks -->
+            <a-box position="-.9 .1 -3" rotation="90 0 0" width=".7" height=".45" scale=".17 4 .22" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <a-box position="-1.1 .1 -3" rotation="90 0 0" width=".7" height=".45" scale=".17 4 .22" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+
+            <a-box position="2.1 .1 -3" rotation="90 0 0" width=".7" height=".45" scale=".17 4 .22" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <a-box position="1.9 .1 -3" rotation="90 0 0" width=".7" height=".45" scale=".17 4 .22" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <-- top beam --->
+        <a-box position=".5 2.3 -3" rotation="90 90 0" width=".5" height=".9" scale=".17 4 .17" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <-top angled beams --->
+            <--left --->
+            <a-box position="-.74 2.09 -2.93" rotation="50 90 -4" width=".3" height=".17" scale=".1 4 .15" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <a-box position="-.74 2.09 -3.09" rotation="50 90 5" width=".3" height=".17" scale=".1 4 .15" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <--right --> 
+            <a-box position="1.75 2.09 -2.93" rotation="135 90 4.2" width=".3" height=".17" scale=".1 4 .15" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+            <a-box position="1.75 2.09 -3.09" rotation="135 90 -5" width=".3" height=".17" scale=".1 4 .15" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"></a-box>
+        <-swing --->
+           
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 1 -3.5" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+
+        </a-cylinder>
+
+            </a-cylinder>
+            <--2---->
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 .785 -3.45" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+
+            </a-cylinder>
+            <--3---->
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 .6 -3.35" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+
+            </a-cylinder>
+            <--4----->
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 .44 -3.2" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+
+            </a-cylinder>
+            <--5----->
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 .44 -2.993" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+
+            </a-cylinder>
+            <--6--->
+            <a-cylinder height="40" 
+                        radius="2" 
+                        segments-radial="6" 
+                        open-ended="true" 
+                        side="double" 
+                        position=".5 .44 -2.79" 
+                        rotation="0 180 90"
+                        scale=".05 .05 .05"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg">
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 20 0">
+            </a-sphere>
+            <a-sphere
+                        radius="50" 
+                        scale=".048 .048 .048"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/hardwood2_diffuse.jpg"
+                        position="0 -20 0">
+            </a-sphere>
+            </a-cylinder>
+            <-- rope -->
+            <a-cylinder
+                        height="205" 
+                        radius="2" 
+                        side="double" 
+                        position="1.5 1.3 -2.9" 
+                        rotation="-7 0 0"
+                        scale=".009 .009 .009"
+            ></a-cylinder>
+            <a-cylinder
+                        height="205" 
+                        radius="2" 
+                        side="double" 
+                        position="-.5 1.3 -2.9" 
+                        rotation="-7 0 0"
+                        scale=".009 .009 .009"
+            ></a-cylinder>
+            <a-cylinder
+            height="150" 
+            radius="2" 
+            side="double" 
+            position="-.5 1.6 -3.25" 
+            rotation="23 0 0"
+            scale=".009 .009 .009"
+            ></a-cylinder>
+            <a-cylinder
+            height="150" 
+            radius="2" 
+            side="double" 
+            position="1.5 1.6 -3.25" 
+            rotation="23 0 0"
+            scale=".009 .009 .009"
+            ></a-cylinder>
+            <a-sphere
+            radius="50"
+            width="" 
+            scale=".5 .2 .2"
+            position="40 50 -50">
+            </a-sphere>
+            <a-sphere
+            radius="40"
+            width="" 
+            scale=".5 .2 .2"
+            position="20 48 -50">
+            </a-sphere>
+            <a-sphere
+            radius="30"
+            width="" 
+            scale=".5 .2 .2"
+            position="60 48 -50">
+            </a-sphere>
+            <a-sphere
+            radius="10"
+            position="-200 100 -150"
+            color="yellow">
+            </a-sphere>
+
+           
+           
+      </a-scene>
+</body>
+</html>
